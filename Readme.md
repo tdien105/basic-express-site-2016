@@ -8,9 +8,6 @@ A simple website in node js to accompany a blog post.
 npm i
 npm run build
 npm start
-
-# development mode (watches for source changes)
-npm run watch
 ```
 
 ## Screenshot
