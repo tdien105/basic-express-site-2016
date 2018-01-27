@@ -3,6 +3,7 @@ node {
     checkout scm
   }
   stage("Build docker image"){
+    sh 'cd /root/app/basic-express-site-2016'
     sh 'docker build -t tdien105/basicexpress .'
   }
   stage("Deloy"){
