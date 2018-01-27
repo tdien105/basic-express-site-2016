@@ -6,8 +6,6 @@ node {
     docker.build('tdien105/basicexpress')
   }
   stage("Deloy"){
-    sh 'docker stop $(docker ps -a -q)'
-    sh 'docker rm $(docker ps -a -q)'
-    sh 'docker run -p 80:3000 -d tdien105/basicexpress'
+    sh 'docker run -p 80:3000 --name=basicexpress -d tdien105/basicexpress'
   }
 }
