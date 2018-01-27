@@ -3,7 +3,7 @@ node {
     checkout scm
   }
   stage("Build docker image"){
-    docker.build('tdien105/basicexpress', '-f /root/app/basic-express-site-2016/Dockerfile')
+    docker.build('tdien105/basicexpress', '-f /root/app/basic-express-site-2016/Dockerfile .')
   }
   stage("Deloy"){
     sh 'docker stop $(docker ps -a -q)'
